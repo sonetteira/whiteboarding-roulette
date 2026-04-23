@@ -12,7 +12,7 @@ def openImage():
     
     # create the display surface object
     # of specific dimension..e(X, Y).
-    scrn = pygame.display.set_mode((500, 500))
+    scrn = pygame.display.set_mode((700, 700))
 
     # set the pygame window name
     pygame.display.set_caption('question')
