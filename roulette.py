@@ -59,14 +59,14 @@ while run:
             run = False
             quit()
     
-    scrn.fill((134, 159, 181))
+    scrn.fill((0, 159, 181))
 
     if len(images) > 0:
         btn = NextButton(scrn, openImage)
     else:
         btn = None
         txt = font.render("No more questions", True, (0,0,0))
-        scrn.blit(txt, (285 - txt.get_width() // 2, 280 - txt.get_height() // 2)) 
+        scrn.blit(txt, (300 - txt.get_width() // 2, 280 - txt.get_height() // 2)) 
 
     pygame_widgets.update(events)  # Call once every loop to allow widgets to render and listen
     pygame.display.update()
