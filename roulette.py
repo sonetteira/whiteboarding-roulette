@@ -66,7 +66,7 @@ while run:
     else:
         btn = None
         txt = font.render("No more questions", True, (0,0,0))
-        scrn.blit(txt, (200 - txt.get_width() // 2, 150 - txt.get_height() // 2)) 
+        scrn.blit(txt, (285 - txt.get_width() // 2, 280 - txt.get_height() // 2)) 
 
     pygame_widgets.update(events)  # Call once every loop to allow widgets to render and listen
     pygame.display.update()
