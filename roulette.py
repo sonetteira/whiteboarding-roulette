@@ -5,6 +5,10 @@ import os
 import pygame_widgets
 from NextButton import NextButton
 
+# screen size
+X = 700
+Y = 700
+
 def openImage():
     image_path = 'questions/'
     # get random image
@@ -12,7 +16,7 @@ def openImage():
     
     # create the display surface object
     # of specific dimension..e(X, Y).
-    scrn = pygame.display.set_mode((700, 700))
+    scrn = pygame.display.set_mode((X, Y))
 
     # set the pygame window name
     pygame.display.set_caption('question')
@@ -47,7 +51,7 @@ pygame.init()
 # pull list of question images
 images = os.listdir('questions')
 
-scrn = pygame.display.set_mode((600, 600))
+scrn = pygame.display.set_mode((X, Y))
 font = pygame.font.SysFont("Arial", 36)
 
 run = True
@@ -62,7 +66,7 @@ while run:
     scrn.fill((0, 159, 181))
 
     if len(images) > 0:
-        btn = NextButton(scrn, openImage)
+        btn = NextButton(scrn, openImage, screen_size_x=700, screen_size_y=700)
     else:
         btn = None
         txt = font.render("No more questions", True, (0,0,0))

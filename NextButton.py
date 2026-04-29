@@ -1,11 +1,13 @@
 from pygame_widgets.button import Button
 
 class NextButton():
-    def __init__(self, win, onclickFunction, buttonText='Next Question'):
+    def __init__(self, win, onclickFunction, buttonText='Next Question', screen_size_x=600, screen_size_y=600):
         self.button = Button(
             win,  # Surface to place button on
-            140,  # X-coordinate of top left corner
-            200,  # Y-coordinate of top left corner
+            # 140,  # X-coordinate of top left corner
+            int(screen_size_x / 2 - 150),
+            # 200,  # Y-coordinate of top left corner
+            int(screen_size_y / 3),
             300,  # Width
             200,  # Height
             text=buttonText,  # Text to display
